@@ -34,5 +34,6 @@ int main() {
     ElemType key = 30;
     int index = Seq_Search(ST, key);
     printf("The key is locate in \033[1;32m%d\033[0m\n", index);
+    free(ST.elem);
     return 0;
 }
