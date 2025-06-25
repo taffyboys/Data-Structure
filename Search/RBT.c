@@ -9,3 +9,8 @@ typedef struct RBNode {
     struct RBNode *rchild;
     Color color;
 } RBNode;
+
+int main() {
+    printf("Hello, Red-Black Tree!\n");
+    return 0;
+}
