@@ -1,14 +1,13 @@
 #include <stdio.h>
 
 void Insertion(int arr[], int n) {
-    for (int i = 1; i < n; ++i) {
-        if (arr[i] < arr[i-1]) {
-            for (int j = i - 1; arr[j+1] < arr[j]; --j) {
-                int temp = arr[j+1];
-                arr[j+1] = arr[j];
-                arr[j] = temp;
-            }
-        }   
+    int i, j, temp;
+    for (i = 1; i < n; ++i) {
+        temp = arr[i];
+        for (j = i-1; j >= 0 && arr[j] > temp; --j) {
+            arr[j+1] = arr[j];
+        }
+        arr[j] = temp;
     }
 }
 
